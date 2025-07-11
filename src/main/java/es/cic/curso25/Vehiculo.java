@@ -19,4 +19,8 @@ public class Vehiculo {
         return this.velocidad += velocidadAceleracion;
     }
 
+    public int frenar (int velocidadFreno){
+        return this.velocidad-= velocidadFreno;
+    }
+
 }

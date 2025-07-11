@@ -12,9 +12,17 @@ public class CamionTest {
     @Test
     void testAcelerar() {
         cut.acelerar(50);
-        int velocidadFinal = cut.acelerar(100);
-        assertEquals((50 + 100), velocidadFinal);
+        cut.acelerar(100);
+        assertEquals((50 + 100), cut.getVelocidad());
     }
+
+      @Test
+    void testFrenar() {
+        cut.frenar(50);
+        cut.frenar(100);
+        assertEquals((-50- 100), cut.getVelocidad());
+    }
+
 
     @Test
     void testRemolque() {
